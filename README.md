@@ -6,3 +6,7 @@
 
 ## square pairing
 ![square pairing picture](https://github.com/lucadonnoh/pairing/blob/master/squarepairing.png?raw=true)
+
+## pentagon pairing ??
+
+## polygon pairing ??
