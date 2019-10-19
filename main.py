@@ -1,6 +1,43 @@
 import matplotlib.pyplot as plt
 import math
 
+def squarepairing():
+    x = 0
+    y = 0
+    list_x = []
+    list_y = []
+    list_x.append(x);
+    list_y.append(y);
+    for i in range(100):
+        if x == 0:
+            x = y + 1
+            y = 0
+        else:
+            if x > y:
+                x = x
+                y = y + 1
+            else:
+                if x <= y:
+                    x = x - 1
+                    y = y
+        list_x.append(x)
+        list_y.append(y)
+    for i_x, i_y in zip(list_x,list_y):
+        if i_x >= i_y:
+            label = max(i_x, i_y)*max(i_x, i_y)+i_y
+        else:
+            label = max(i_x, i_y)*max(i_x, i_y)+i_y+i_y-i_x
+        plt.text(i_x, i_y, '{}'.format((int)(label)), color='#e86f68')
+
+    plt.plot(list_x,list_y, '--o', color='#444444')
+    plt.axis([-0.5, 6.5, -0.5, 6.5])
+    plt.savefig('squarepairing.png', dpi=600)
+    plt.show()
+
+
+    
+
+
 def topair(n):
     print(n)
     a = n*8
@@ -16,6 +53,7 @@ def topair(n):
     x = w - y
     print(str(x) + "," + str(y))
     return [x,y]
+
 
 x = []
 y = []
@@ -44,6 +82,7 @@ def plotta():
 
 
 npoints = 100
-topair(73)
-plotta()
+
+#plotta()
+squarepairing()
 
