@@ -1,0 +1,49 @@
+import matplotlib.pyplot as plt
+import math
+
+def topair(n):
+    print(n)
+    a = n*8
+    b = a + 1
+    c = math.sqrt(b)
+    d = c - 1
+    e = d / 2
+    w = math.floor(e)
+    f = w + 1
+    g = w*f
+    t = g / 2
+    y = n - t
+    x = w - y
+    print(str(x) + "," + str(y))
+    return [x,y]
+
+x = []
+y = []
+plt.style.use('dark_background')
+fig = plt.figure()
+ax = fig.add_subplot(111)
+plt.setp(ax.get_xticklabels(), color="#c2b28f")
+plt.setp(ax.get_yticklabels(), color="#c2b28f")
+
+def plotta():
+    for i in range(npoints):
+        punto = topair(i)
+        x.append(punto[0])
+        y.append(punto[1])
+
+    for i_x, i_y in zip(x,y):
+        plt.text(i_x, i_y, '{}'.format((int)((i_x+i_y)*(i_x+i_y+1)/2+i_y)), color='#e86f68')
+
+    #plt.plot(x,y, 'ro')
+    plt.plot(x,y, '--o', color='#444444')
+    plt.axis([-0.5, 6.5, -0.5, 6.5])
+    #plt.axis('off')
+    
+    plt.savefig('trianglepairing.png', dpi=600)
+    plt.show()
+
+
+npoints = 100
+topair(73)
+plotta()
+
