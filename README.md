@@ -4,7 +4,7 @@
  ## triangle pairing
  ![triangle pairing picture](https://github.com/lucadonnoh/pairing/blob/master/trianglepairing.png?raw=true)
  
- Genera i numeri utilizzando la funzione f^-1: N->NxN (trovata su wikipedia).
+ Genera i numeri utilizzando la funzione f^-1: N->NxN.
  
  ### derivazione della funzione f: NxN->N
  Si nota che i punti su una stessa diagonale hanno una cosa in comune: hanno lo stesso x+y=n.
