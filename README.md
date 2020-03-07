@@ -1,5 +1,5 @@
 # pairing
- compito per casa di logica (coen)
+ studio di funzioni di pairing NxN->N
  
  ## triangle pairing
  ![triangle pairing picture](https://github.com/lucadonnoh/pairing/blob/master/trianglepairing.png?raw=true)
